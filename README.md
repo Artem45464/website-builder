@@ -27,8 +27,8 @@ Clone the Repository: Clone your repository to your local machine using Git. Ope
 
  2 Add Your Website Files: Move your HTML, CSS, and JavaScript files into the cloned repository folder.
 
- 3    $ cd my-website
-      git add .
+    $ cd my-website
+     git add .
      git commit -m "Initial commit"
      git push origin main
 
@@ -54,11 +54,13 @@ Click "Save".
 
  1 Make Changes Locally: Edit your files locally on your machine.
 
- 2 Commit and Push Changes
+  2 Commit and Push Changes
+
 
    $ git add .
-   $ git commit -m "Describe your changes"
-   $ git push origin main
+     git commit -m "Describe your changes"
+     git push origin main
+
 
    Your changes will be automatically reflected on your GitHub Pages site.
 
@@ -66,6 +68,7 @@ Click "Save".
 
    Here's an example of how your project structure might look:
 
+   
    my-website/
 ├── index.html
 ├── styles.css
