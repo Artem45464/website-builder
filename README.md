@@ -11,11 +11,3 @@ A simple website builder tool for creating and managing websites.
 - **Version Control**: Integrated version control for managing changes.
 - **Export**: Ability to export websites for deployment.
 
-## Installation
-
-To get started with the Website Builder, follow these steps:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/website-builder.git
-   cd website-builder
