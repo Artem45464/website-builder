@@ -4,15 +4,19 @@ body {
     padding: 0;
     background-color: #f4f4f4;
 }
+
 header {
     background-color: #333;
     color: white;
     padding: 1rem;
     text-align: center;
 }
+
 main {
     padding: 1rem;
+    margin-bottom: 4rem; /* Added margin to avoid footer overlap */
 }
+
 footer {
     background-color: #333;
     color: white;
@@ -21,4 +25,14 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+@media (max-width: 600px) {
+    header, footer {
+        padding: 0.5rem;
+    }
+
+    main {
+        padding: 0.5rem;
+    }
 }
