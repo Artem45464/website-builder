@@ -1,3 +1,6 @@
+html, body {
+    height: 100%; /* Ensures full-height layout */
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -26,9 +29,8 @@ footer {
     color: white;
     padding: 1rem;
     text-align: center;
-    position: relative;
     width: 100%;
-    bottom: 0;
+    /* Removed 'position: relative' and 'bottom: 0' to let flexbox handle it */
 }
 
 @media (max-width: 600px) {
@@ -40,5 +42,3 @@ footer {
         padding: 0.5rem;
     }
 }
-
-
