@@ -3,13 +3,14 @@ html, body {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    min-height: -webkit-fill-available; /* Fallback for iOS Safari */
 }
 
 header {
@@ -30,7 +31,6 @@ footer {
     padding: 1rem;
     text-align: center;
     width: 100%;
-    /* Removed 'position: relative' and 'bottom: 0' to let flexbox handle it */
 }
 
 @media (max-width: 600px) {
@@ -40,5 +40,15 @@ footer {
 
     main {
         padding: 0.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    header, footer {
+        padding: 2rem;
+    }
+
+    main {
+        padding: 2rem;
     }
 }
