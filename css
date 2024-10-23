@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box; /* Helps manage sizing of elements */
+}
+
 html, body {
     height: 100%; /* Ensures full-height layout */
 }
@@ -13,11 +17,12 @@ body {
     min-height: -webkit-fill-available; /* Fallback for iOS Safari */
 }
 
-header {
+header, footer {
     background-color: #333;
     color: white;
     padding: 1rem;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
 }
 
 main {
@@ -25,30 +30,14 @@ main {
     flex: 1; /* Flexbox grow to fill available space */
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    width: 100%;
-}
-
 @media (max-width: 600px) {
-    header, footer {
-        padding: 0.5rem;
-    }
-
-    main {
-        padding: 0.5rem;
+    header, footer, main {
+        padding: 0.5rem; /* Adjust padding for small screens */
     }
 }
 
 @media (min-width: 768px) {
-    header, footer {
-        padding: 2rem;
-    }
-
-    main {
-        padding: 2rem;
+    header, footer, main {
+        padding: 2rem; /* Adjust padding for larger screens */
     }
 }
