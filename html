@@ -13,15 +13,17 @@
         .navbar {
             margin-bottom: 20px;
         }
-        /* CSS to style navbar buttons */
         .nav-link {
             text-decoration: none;
-            color: #ffffff; /* Default text color for navbar links */
-            border-bottom: 2px solid transparent; /* Keeps the underline hidden by default */
-            transition: border-color 0.2s ease; /* Smooth transition for border color */
+            color: #ffffff;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s ease;
         }
         .nav-link:hover {
-            border-color: #ffffff; /* Change underline color to white on hover */
+            border-color: #ffffff;
+        }
+        .nav-link.active {
+            border-color: #ffffff;
         }
     </style>
 </head>
@@ -50,5 +52,15 @@
 
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+       
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
 </body>
 </html>
