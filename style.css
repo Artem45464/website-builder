@@ -1,12 +1,15 @@
-body {
-    font-family: Arial, Helvetica, "Segoe UI", Tahoma, sans-serif;
+html, body {
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, "Segoe UI", Tahoma, sans-serif;
     background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     min-height: -webkit-fill-available;
+    min-height: 100vh;
     gap: 1rem; /* Adds spacing between header, main, and footer */
 }
 
@@ -15,14 +18,15 @@ header, footer {
     color: white;
     padding: 1rem;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Lighter shadow */
     font-size: 1.25rem; /* Improved readability */
 }
 
 main {
     padding: 1rem;
     flex: 1;
-    overflow-wrap: break-word; /* Handles long text overflow */
+    overflow-wrap: break-word;
+    word-break: break-word; /* Fallback for older browsers */
 }
 
 @media (max-width: 600px) {
