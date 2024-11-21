@@ -1,21 +1,31 @@
+// Function to change text when the button is clicked
 function changeText() {
-    document.getElementById('about').innerText = 'You clicked the button!';
+    const aboutElement = document.getElementById('about');
+    if (aboutElement) {
+        aboutElement.innerText = 'You clicked the button!';
+    } else {
+        console.error('Element with ID "about" not found!');
+    }
 }
 
 // Script for handling the navbar active state
 document.addEventListener('DOMContentLoaded', function () {
+    const navbar = document.querySelector('.navbar');
     const navLinks = document.querySelectorAll('.nav-link');
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', function (event) {
-            event.preventDefault(); // Stops the default navigation behavior
-            navLinks.forEach(link => link.classList.remove('active')); // Clear other active links
-            this.classList.add('active'); // Set the clicked link as active
-        });
-    });
-});
+    if (navbar) {
+        navbar.addEventListener('click', function (event) {
+            if (event.target.classList.contains('nav-link')) {
+                event.preventDefault(); // Stops the default navigation behavior
 
-// Function to change text when the button is clicked
-function changeText() {
-    document.getElementById('about').innerText = 'You clicked the button!';
-}
+                // Remove active class from all links
+                navLinks.forEach(link => link.classList.remove('active'));
+
+                // Add active class to the clicked link
+                event.target.classList.add('active');
+            }
+        });
+    } else {
+        console.error('Navbar not found!');
+    }
+});
