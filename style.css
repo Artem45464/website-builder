@@ -1,57 +1,69 @@
-html, body {
-    margin: 0;
-    padding: 0;
-}
-
+/* Basic styling improvements */
 body {
-    font-family: Arial, Helvetica, "Segoe UI", Tahoma, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    min-height: -webkit-fill-available;
-    min-height: 100vh;
-    gap: 1rem;
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
 }
 
-header, footer {
-    background-color: #444;
+/* Enhanced navbar styling */
+.navbar {
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+}
+
+/* Improved navigation links */
+.nav-link {
+    text-decoration: none;
     color: #ffffff;
-    padding: 1rem;
-    text-align: center;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    font-size: 1.25rem;
-    line-height: 1.5;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    margin: 0 0.2rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
 }
 
-main {
-    padding: 1rem;
-    flex: 1;
-    overflow-wrap: break-word;
-    word-break: break-word;
-    font-size: 1rem;
+.nav-link:hover {
+    background-color: rgba(255,255,255,0.1);
+    transform: translateY(-2px);
 }
 
-@media (max-width: 600px) {
-    header, footer, main {
+.nav-link.active {
+    background-color: rgba(255,255,255,0.2);
+    border-bottom: 2px solid #ffffff;
+}
+
+/* Brand name styling */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #17a2b8 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar {
         padding: 0.5rem;
     }
-    main {
-        font-size: 0.9rem;
+    
+    .nav-link {
+        padding: 0.5rem;
+        margin: 0.2rem 0;
     }
 }
 
-@media (min-width: 768px) {
-    header, footer, main {
-        padding: 2rem;
-    }
+/* Optional: Add smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
 }
 
-@media (min-width: 1200px) {
-    header, footer, main {
-        padding: 3rem;
-    }
-    main {
-        font-size: 1.1rem;
-    }
+/* Optional: Custom container width */
+.container-fluid {
+    max-width: 1400px;
+    margin: 0 auto;
 }
