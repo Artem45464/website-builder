@@ -10,22 +10,73 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
+        /* Basic styling */
         body {
             background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
         }
+    
+        /* Navbar styling */
         .navbar {
             margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 1rem 0;
         }
+    
+        /* Navigation links */
         .nav-link {
             text-decoration: none;
             color: #ffffff;
             border-bottom: 2px solid transparent;
-            transition: border-color 0.2s ease;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            margin: 0 0.2rem;
+            border-radius: 4px;
         }
-        .nav-link:hover, .nav-link.active {
+    
+        .nav-link:hover {
             border-color: #ffffff;
+            background-color: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+    
+        .nav-link.active {
+            border-color: #ffffff;
+            background-color: rgba(255,255,255,0.2);
+        }
+    
+        /* Brand styling */
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease;
+        }
+    
+        .navbar-brand:hover {
+            color: #17a2b8 !important;
+        }
+    
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 0.5rem;
+            }
+            
+            .nav-link {
+                padding: 0.5rem;
+                margin: 0.2rem 0;
+            }
+        }
+    
+        /* Container styling */
+        .container-fluid {
+            max-width: 1400px;
+            margin: 0 auto;
         }
     </style>
+    
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -57,4 +108,4 @@
     <!-- Link to external JavaScript -->
     <script src="script.js"></script>
 </body>
-</html>
+</html> 
