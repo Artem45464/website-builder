@@ -41,9 +41,6 @@ body {
     transition: color 0.3s ease;
 }
 
-.navbar-brand:hover {
-    color: #17a2b8 !important;
-}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
